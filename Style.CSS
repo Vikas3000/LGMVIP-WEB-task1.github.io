@@ -1,0 +1,241 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.main {
+
+  width: 100vw;
+  height: 100vh;
+  background: url(/1255818.jpg) no-repeat;
+
+}
+
+.text {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  right: 0px;
+  font-size: 100px;
+  background: transparent;
+  box-shadow: 10px 10px 20px #110101;
+  z-index: 4;
+}
+
+.text span {
+  color: #d8d6b7f6;
+  box-shadow: 4px 4px 8px #0f0f0f !important;
+  backdrop-filter: blur(20px) !important;
+  margin: 6px;
+  background-color: rgba(47, 93, 245, 0.712);
+}
+
+.container {
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  padding: 30px 60px;
+  box-shadow: 50px 40px 30px #110101;
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  z-index: 4;
+}
+
+.input-tsk {
+  height: 62px;
+  padding: 0 2px;
+  position: relative;
+}
+
+.input-tsk input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 30px;
+  border-radius: 10px;
+  padding: 0 20px 0 53px;
+  border: 1px solid rgb(231, 231, 231);
+  background-color: #3c87ff54;
+  -webkit-text-fill-color: #e6d19a;
+}
+
+.input-tsk input:focus,
+.input-tsk input.active {
+  padding-left: 60px;
+  border: 2px solid #4331e6;
+}
+
+.input-tsk input::placeholder {
+  color: #f0f0f3;
+}
+
+.ctrls,
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(25, 253, 5);
+}
+
+.ctrls {
+  padding: 20px 20px;
+  border-bottom: 1px solid rgb(253, 253, 255);
+}
+
+.fltrs span {
+  margin: 0 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  opacity: 0.6;
+  outline: none;
+  color: #fff;
+  padding: 7px 13px;
+  letter-spacing: 0.3px;
+  transition: transform 0.30s ease;
+  background-color: #3c87ff54;
+}
+
+.fltrs span:first-child {
+  margin-left: 0;
+}
+
+.fltrs span.active {
+  color: #3C87FF;
+}
+
+.ctrls .clr-btn {
+  border: none;
+  opacity: 0.6;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 7px 13px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  transition: transform 0.25s ease;
+  background-color: #3c87ff54;
+
+}
+
+.clr-btn.active {
+  color: #3C87FF;
+  opacity: 0.9;
+  pointer-events: auto;
+}
+
+.clr-btn:active {
+  transform: scale(0.93);
+}
+
+.task-box {
+  margin-top: 0px;
+  margin-right: 5px;
+  padding: 15px 20px 10px 25px;
+  color: #ccc;
+}
+
+.task-box.overflow {
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.task-box::-webkit-scrollbar {
+  width: 2px;
+}
+
+.task-box::-webkit-scrollbar-track {
+  background: #3c87ff3d;
+  border-radius: 2px;
+}
+
+.task-box::-webkit-scrollbar-thumb {
+  background: #e2e79da6;
+  border-radius: 25px;
+}
+
+.task-box .task {
+  list-style: none;
+  font-size: 22px;
+  margin-bottom: 5px;
+  padding-bottom: 0px;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(221, 199, 126, 0.767);
+  background-color: #e4e4e442;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px #0f0f0f !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.task-box .task label {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 24px;
+  margin-top: 9px;
+}
+
+.task label input {
+  margin-top: 7px;
+  accent-color: #ff493c62;
+  cursor: pointer;
+}
+
+.task label p {
+  user-select: none;
+  margin-left: 12px;
+  word-wrap: break-word;
+}
+
+.task label p.checked {
+  text-decoration: line-through;
+  color: #e25252c0;
+  cursor: pointer;
+}
+
+.task-box .settings {
+  position: relative;
+}
+
+.settings .task-menu {
+  padding: 0px 0px;
+
+}
+
+.task-box .task:last-child .task-menu {
+  bottom: 10px;
+  transform-origin: bottom right;
+}
+
+.task-box .task:first-child .task-menu {
+  bottom: -65px;
+  transform-origin: top right;
+}
+
+.task-menu.show {
+  transform: scale(1);
+}
+
+.task-menu li {
+  height: 0;
+  font-size: 15px;
+  margin-bottom: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  justify-content: flex-start;
+  color: rgba(204, 204, 204, 0.644);
+  background-color: #0f0f0f5b;
+}
+
+.task-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.settings li:hover {
+  background: #3c69ff54;
+  border-start-end-radius: 20px;
+}
